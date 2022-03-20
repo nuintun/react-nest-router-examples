@@ -1,8 +1,8 @@
 {
-  "name": "webpack-antd-build",
+  "name": "react-nest-router-examples",
   "version": "1.0.0",
   "private": true,
-  "description": "A webpack antd build tools.",
+  "description": "React nest router examples.",
   "engines": {
     "node": ">=8.0.0"
   },
