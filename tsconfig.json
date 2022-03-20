@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noEmit": true,
+    "strict": true,
+    "allowJs": true,
+    "newLine": "lf",
+    "jsx": "preserve",
+    "module": "ESNext",
+    "target": "ESNext",
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "useUnknownInCatchVariables": false,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "/js/*": [
+        "Assets/js/*"
+      ],
+      "/css/*": [
+        "Assets/css/*"
+      ],
+      "/mods/*": [
+        "node_modules/*"
+      ],
+      "/images/*": [
+        "Assets/images/*"
+      ],
+      "~*": [
+        "node_modules/*"
+      ]
+    }
+  },
+  "include": [
+    "Assets"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

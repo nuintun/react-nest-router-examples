@@ -1,0 +1,86 @@
+{
+  "name": "webpack-antd-build",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A webpack antd build tools.",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "start": "node server.js",
+    "dev": "node webpack/bin/webpack.config.dev.js",
+    "prod": "node webpack/bin/webpack.config.prod.js",
+    "watch": "nodemon webpack/bin/webpack.config.server.js",
+    "report": "node webpack/bin/webpack.config.prod.js --report",
+    "format": "prettier --write .babelrc.js .postcssrc.js webpack Assets"
+  },
+  "author": {
+    "name": "nuintun",
+    "email": "nuintun@qq.com"
+  },
+  "license": "MIT",
+  "browserslist": [
+    "defaults",
+    "not IE >= 0"
+  ],
+  "nodemonConfig": {
+    "quiet": true,
+    "delay": "100ms",
+    "watch": [
+      ".babelrc.js",
+      "webpack/**/*",
+      ".postcssrc.js",
+      "wwwroot/favicon.ico",
+      "Assets/css/theme.less"
+    ]
+  },
+  "dependencies": {
+    "antd": "^4.19.2",
+    "core-js": "^3.21.1",
+    "history": "^5.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/plugin-proposal-decorators": "^7.17.8",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@svgr/webpack": "^6.2.1",
+    "@teamsupercell/typings-for-css-modules-loader": "^2.5.1",
+    "@types/react": "^17.0.41",
+    "@types/react-dom": "^17.0.14",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/throttle-debounce": "^2.1.0",
+    "@types/webpack-env": "^1.16.3",
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-import": "^1.13.3",
+    "case-sensitive-paths-webpack-plugin": "^2.4.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "3.4.1",
+    "find-free-ports": "^3.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "koa": "^2.13.4",
+    "koa-compress": "^5.1.0",
+    "koa-files": "^2.0.0",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "memfs": "^3.4.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "nodemon": "^2.0.15",
+    "postcss": "^8.4.12",
+    "postcss-loader": "^6.2.1",
+    "prettier": "^2.6.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.1",
+    "typescript": "^4.6.2",
+    "webpack": "^5.70.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-dev-server-middleware": "^0.7.10"
+  }
+}
