@@ -4,12 +4,14 @@
 
 const fs = require('fs');
 const Koa = require('koa');
+const zlib = require('zlib');
 const files = require('koa-files');
 const compress = require('koa-compress');
 
 const app = new Koa();
 
-app.use(compress());
+app.use(compress({ br: false }));
+
 app.use(files('wwwroot'));
 
 app.use(async ctx => {
