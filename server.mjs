@@ -2,11 +2,10 @@
  * @server
  */
 
-const fs = require('fs');
-const Koa = require('koa');
-const zlib = require('zlib');
-const files = require('koa-files');
-const compress = require('koa-compress');
+import fs from 'fs';
+import Koa from 'koa';
+import files from 'koa-files';
+import compress from 'koa-compress';
 
 const app = new Koa();
 
