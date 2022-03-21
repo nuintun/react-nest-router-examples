@@ -2,7 +2,7 @@ import '/css/global.less';
 
 import { render } from 'react-dom';
 import { Route, Router } from 'react-nest-router';
-import React, { lazy, memo, Suspense } from 'react';
+import React, { lazy, memo, StrictMode, Suspense } from 'react';
 
 const Home = lazy(() => import('/js/pages/Home'));
 const Login = lazy(() => import('/js/pages/Login'));
@@ -41,13 +41,15 @@ const routes: Route<{ id: number }, 'id'>[] = [
 
 const App = memo(function App(): React.ReactElement {
   return (
-    <div style={{ textAlign: 'center', paddingTop: 68 }}>
-      <Suspense fallback="loading...">
-        <Router routes={routes} context={{ message: 'Outlet Context' }}>
-          <NoMatch />
-        </Router>
-      </Suspense>
-    </div>
+    <StrictMode>
+      <div style={{ textAlign: 'center', paddingTop: 68 }}>
+        <Suspense fallback="loading...">
+          <Router routes={routes} context={{ message: 'Outlet Context' }}>
+            <NoMatch />
+          </Router>
+        </Suspense>
+      </div>
+    </StrictMode>
   );
 });
 
