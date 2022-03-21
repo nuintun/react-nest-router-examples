@@ -1,6 +1,6 @@
 import { Space } from 'antd';
 import { useCallback, useEffect } from 'react';
-import { useNavigate, useResolve } from '/js/components/react-nest-router';
+import { useNavigate, useResolve } from 'react-nest-router';
 
 export default function NoMatch() {
   const resolve = useResolve();

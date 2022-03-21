@@ -1,6 +1,6 @@
 import { Divider, Space } from 'antd';
 import { useCallback, useEffect } from 'react';
-import { Outlet, useMatches, useNavigate, useOutletContext, useResolve } from '/js/components/react-nest-router';
+import { Outlet, useMatches, useNavigate, useOutletContext, useResolve } from 'react-nest-router';
 
 export default function Navigation() {
   const matches = useMatches();

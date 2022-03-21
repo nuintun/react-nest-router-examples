@@ -1,6 +1,6 @@
 import { Space } from 'antd';
 import { useEffect } from 'react';
-import { Outlet, useOutletContext } from '/js/components/react-nest-router';
+import { Outlet, useOutletContext } from 'react-nest-router';
 
 export default function Courses() {
   useEffect(() => {

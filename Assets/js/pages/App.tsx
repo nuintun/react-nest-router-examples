@@ -1,8 +1,8 @@
 import '/css/global.less';
 
 import { render } from 'react-dom';
+import { Route, Router } from 'react-nest-router';
 import React, { lazy, memo, Suspense } from 'react';
-import { Route, Router } from '/js/components/react-nest-router';
 
 const Home = lazy(() => import('/js/pages/Home'));
 const Login = lazy(() => import('/js/pages/Login'));

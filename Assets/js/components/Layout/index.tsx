@@ -1,6 +1,6 @@
 import { Space } from 'antd';
 import { useEffect } from 'react';
-import { Outlet } from '/js/components/react-nest-router';
+import { Outlet } from 'react-nest-router';
 
 export default function Layout() {
   useEffect(() => {

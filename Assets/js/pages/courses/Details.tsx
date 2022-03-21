@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLocation, useParams } from '/js/components/react-nest-router';
+import { useLocation, useParams } from 'react-nest-router';
 
 export default function CoursesDetails() {
   useEffect(() => {
