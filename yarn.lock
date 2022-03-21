@@ -2048,7 +2048,7 @@ core-js-compat@^3.20.2, core-js-compat@^3.21.0:
     browserslist "^4.19.1"
     semver "7.0.0"
 
-core-js@^3.21.0, core-js@^3.21.1:
+core-js@^3.21.1:
   version "3.21.1"
   resolved "https://registry.npmjs.org/core-js/-/core-js-3.21.1.tgz#f2e0ddc1fc43da6f904706e8e955bc19d06a0d94"
   integrity sha512-FRq5b/VMrWlrmCzwRrpDYNxyHP9BcAZC+xHJaqTgIE5091ZV1NTmyh0sGOg5XqpnHvR0svdy0sv1gWA1zmhxig==
@@ -2278,7 +2278,7 @@ depd@~1.1.2:
   resolved "https://registry.npmjs.org/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
 
-destroy@^1.0.4:
+destroy@^1.0.4, destroy@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz#4803735509ad8be552934c67df614f94e66fa015"
   integrity sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==
@@ -3049,14 +3049,15 @@ koa-convert@^2.0.0:
     co "^4.6.0"
     koa-compose "^4.1.0"
 
-koa-files@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/koa-files/-/koa-files-2.0.0.tgz#745391d21f85d1a001211f7734057e66274b7571"
-  integrity sha512-Gv3GwCLqzeoBRp1ip3ex23AG7+ukgsLYw298rU5KzulnBEjQKfHGFhGuAa/97mtPPuJf/PRJ9NQeTl9P2x/BcA==
+koa-files@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/koa-files/-/koa-files-2.1.0.tgz#e6674430154a7ee276020685732177239cea0e14"
+  integrity sha512-oBuupQmaqWp87T+TQBBB5P61fy2zJTWAS1qrXCIerwDab4MGidqkL4MvyVflYmd1Z5gkp40jwHSgCLtIpsQDlA==
   dependencies:
-    destroy "^1.0.4"
+    destroy "^1.2.0"
     etag "^1.8.1"
     range-parser "^1.2.1"
+    tslib "^2.3.1"
 
 koa-is-json@^1.0.0:
   version "1.0.0"
@@ -4870,7 +4871,7 @@ url-parse-lax@^3.0.0:
   dependencies:
     prepend-http "^2.0.0"
 
-utf-8-validate@^5.0.8:
+utf-8-validate@^5.0.9:
   version "5.0.9"
   resolved "https://registry.npmjs.org/utf-8-validate/-/utf-8-validate-5.0.9.tgz#ba16a822fbeedff1a58918f2a6a6b36387493ea3"
   integrity sha512-Yek7dAy0v3Kl0orwMlvi7TPtiCNrdfHNd7Gcc/pLq4BLXqfAmd0J7OWMizUQnTTJsyjKn02mU7anqwfmUP4J8Q==
@@ -4926,16 +4927,16 @@ webpack-dev-middleware@^5.3.1:
     range-parser "^1.2.1"
     schema-utils "^4.0.0"
 
-webpack-dev-server-middleware@^0.7.10:
-  version "0.7.10"
-  resolved "https://registry.npmjs.org/webpack-dev-server-middleware/-/webpack-dev-server-middleware-0.7.10.tgz#cb79de8670aabef37027f6c00e93a2dfde0f30b0"
-  integrity sha512-lAcy5+7zc3KnZTxYrs9Vs+lvcPiNEj8/E8hAWpnEbSTuHvW8JqIsc+qiKL8ZEEQK/CdbKESAN4KNKweo0YfPLw==
+webpack-dev-server-middleware@^0.7.11:
+  version "0.7.11"
+  resolved "https://registry.npmjs.org/webpack-dev-server-middleware/-/webpack-dev-server-middleware-0.7.11.tgz#3fb3bbccd1e5657e945a85d9681eda57297ad990"
+  integrity sha512-j6227HZBEv3csWeiSrroGhI6JB2WjN1AbJD/E5NlO0o8M4JWMSrmwj0wH07TL9SaVI0hmoiMObEXbFM3fyqBcg==
   dependencies:
     ansi-regex "^6.0.1"
     bufferutil "^4.0.6"
-    core-js "^3.21.0"
+    core-js "^3.21.1"
     koa-compose "^4.1.0"
-    utf-8-validate "^5.0.8"
+    utf-8-validate "^5.0.9"
     webpack-dev-middleware "^5.3.1"
     ws "^8.5.0"
 
