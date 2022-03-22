@@ -3292,9 +3292,9 @@ minimatch@^3.0.4:
     brace-expansion "^1.1.7"
 
 minimist@^1.2.0:
-  version "1.2.5"
-  resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
-  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+  version "1.2.6"
+  resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
+  integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
 moment@^2.24.0, moment@^2.25.3:
   version "2.29.1"
@@ -4294,10 +4294,10 @@ react-is@^16.12.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-nest-router@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.npmjs.org/react-nest-router/-/react-nest-router-0.0.2.tgz#c6ef4a519ce6c2613b52b523b9b9e893ac900337"
-  integrity sha512-HmcIR1lP2op6TsiaYdAWouyB0/ZRnqCjn17uwp0af12PiCf+aCGlodfzdQBk68oWYEtpEbA71HtYRIQiMKo+xg==
+react-nest-router@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/react-nest-router/-/react-nest-router-0.0.3.tgz#9dd361bebce7028c19a8a5e92adbfdd7f87d5e61"
+  integrity sha512-r7XOjMqaJbLfvk1MSAEI9R5QGTM/0tBsW6pvFtj5LwVcjtScR9Q/DhpljBU7dWVkCMFXjvJbMIGBwsBMXM+9Tg==
   dependencies:
     history "^5.3.0"
     tslib "^2.3.1"
