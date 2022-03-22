@@ -1,5 +1,5 @@
 import { Divider, Space } from 'antd';
-import { useCallback, useEffect } from 'react';
+import { Suspense, useCallback, useEffect } from 'react';
 import { Outlet, useMatches, useNavigate, useOutletContext, useResolve } from 'react-nest-router';
 
 export default function Navigation() {
@@ -56,7 +56,9 @@ export default function Navigation() {
           .join(' --> ') || '/'}
       </div>
       <Divider />
-      <Outlet />
+      <Suspense fallback="loading...">
+        <Outlet />
+      </Suspense>
     </Space>
   );
 }
