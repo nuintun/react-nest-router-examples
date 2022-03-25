@@ -15,6 +15,9 @@ app.use(files('wwwroot'));
 
 app.use(async ctx => {
   ctx.type = 'text/html';
+
+  ctx.set('X-Content-Type-Options', 'nosniff');
+
   ctx.body = fs.createReadStream('wwwroot/app.html');
 });
 
