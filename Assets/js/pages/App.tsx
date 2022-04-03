@@ -1,8 +1,8 @@
 import '/css/global.less';
 
-import { render } from 'react-dom';
 import { Route, Router } from 'react-nest-router';
-import React, { lazy, memo, StrictMode, Suspense } from 'react';
+import React, { lazy, memo, Suspense } from 'react';
+import { createRoot, Root } from 'react-dom/client';
 
 const Home = lazy(() => import('/js/pages/Home'));
 const Login = lazy(() => import('/js/pages/Login'));
@@ -41,20 +41,36 @@ const routes: Route<{ id: number }, 'id'>[] = [
 
 const App = memo(function App(): React.ReactElement {
   return (
-    <StrictMode>
-      <div style={{ textAlign: 'center', paddingTop: 68 }}>
-        <Suspense fallback="loading...">
-          <Router routes={routes} context={{ message: 'Outlet Context' }}>
-            <NoMatch />
-          </Router>
-        </Suspense>
-      </div>
-    </StrictMode>
+    <div style={{ textAlign: 'center', paddingTop: 68 }}>
+      <Suspense fallback="loading...">
+        <Router routes={routes} context={{ message: 'Outlet Context' }}>
+          <NoMatch />
+        </Router>
+      </Suspense>
+    </div>
   );
 });
 
-if (__DEV__) {
-  module.hot && module.hot.accept();
+declare global {
+  interface Window {
+    __REACT_ROOT__: Root;
+  }
 }
 
-render(<App />, document.getElementById('root'));
+if (__DEV__) {
+  const root = (() => {
+    if (!window.__REACT_ROOT__) {
+      window.__REACT_ROOT__ = createRoot(document.getElementById('root') as HTMLDivElement);
+    }
+
+    return window.__REACT_ROOT__;
+  })();
+
+  root.render(<App />);
+
+  module.hot && module.hot.accept();
+} else {
+  const root = createRoot(document.getElementById('root') as HTMLDivElement);
+
+  root.render(<App />);
+}
