@@ -1,8 +1,8 @@
 import { Space } from 'antd';
-import { useCallback, useEffect } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { useNavigate, useResolve } from 'react-nest-router';
 
-export default function NoMatch() {
+export default memo(function NoMatch() {
   const resolve = useResolve();
 
   useEffect(() => {
@@ -31,4 +31,4 @@ export default function NoMatch() {
       </a>
     </Space>
   );
-}
+});

@@ -1,8 +1,8 @@
 import { Divider, Space } from 'antd';
-import { Suspense, useCallback, useEffect } from 'react';
+import { memo, Suspense, useCallback, useEffect } from 'react';
 import { Outlet, useMatches, useNavigate, useOutletContext, useResolve } from 'react-nest-router';
 
-export default function Navigation() {
+export default memo(function Navigation() {
   const matches = useMatches();
   const resolve = useResolve();
   const navigate = useNavigate();
@@ -61,4 +61,4 @@ export default function Navigation() {
       </Suspense>
     </Space>
   );
-}
+});

@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import { memo, useEffect } from 'react';
 
-export default function Home() {
+export default memo(function Home() {
   useEffect(() => {
     console.log('Home Mounted');
 
@@ -10,4 +10,4 @@ export default function Home() {
   }, []);
 
   return <div>Home</div>;
-}
+});

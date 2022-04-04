@@ -1,8 +1,8 @@
 import { Space } from 'antd';
-import { useEffect } from 'react';
+import { memo, useEffect } from 'react';
 import { Outlet, useOutletContext } from 'react-nest-router';
 
-export default function Courses() {
+export default memo(function Courses() {
   useEffect(() => {
     console.log('Courses Mounted');
 
@@ -19,4 +19,4 @@ export default function Courses() {
       <Outlet />
     </Space>
   );
-}
+});

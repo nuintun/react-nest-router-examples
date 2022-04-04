@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { memo, useEffect } from 'react';
 import { useLocation, useParams } from 'react-nest-router';
 
-export default function CoursesDetails() {
+export default memo(function CoursesDetails() {
   useEffect(() => {
     console.log('Courses Details Mounted');
 
@@ -16,4 +16,4 @@ export default function CoursesDetails() {
   console.log('Courses Details:', location.state);
 
   return <div>Courses Details {params.id}</div>;
-}
+});

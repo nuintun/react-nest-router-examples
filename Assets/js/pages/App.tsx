@@ -2,7 +2,6 @@ import '/css/global.less';
 
 import { Route, Router } from 'react-nest-router';
 import React, { lazy, memo, Suspense } from 'react';
-import { createRoot, Root } from 'react-dom/client';
 
 const Home = lazy(() => import('/js/pages/Home'));
 const Login = lazy(() => import('/js/pages/Login'));
@@ -39,7 +38,7 @@ const routes: Route<{ id: number }, 'id'>[] = [
   }
 ];
 
-const App = memo(function App(): React.ReactElement {
+export default memo(function App(): React.ReactElement {
   return (
     <div style={{ textAlign: 'center', paddingTop: 68 }}>
       <Suspense fallback="loading...">
@@ -50,27 +49,3 @@ const App = memo(function App(): React.ReactElement {
     </div>
   );
 });
-
-declare global {
-  interface Window {
-    __REACT_ROOT__: Root;
-  }
-}
-
-if (__DEV__) {
-  const root = (() => {
-    if (!window.__REACT_ROOT__) {
-      window.__REACT_ROOT__ = createRoot(document.getElementById('root') as HTMLDivElement);
-    }
-
-    return window.__REACT_ROOT__;
-  })();
-
-  root.render(<App />);
-
-  module.hot && module.hot.accept();
-} else {
-  const root = createRoot(document.getElementById('root') as HTMLDivElement);
-
-  root.render(<App />);
-}

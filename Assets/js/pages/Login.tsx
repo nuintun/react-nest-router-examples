@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import { memo, useEffect } from 'react';
 
-export default function Login() {
+export default memo(function Login() {
   useEffect(() => {
     console.log('Login Mounted');
 
@@ -10,4 +10,4 @@ export default function Login() {
   }, []);
 
   return <div>Login</div>;
-}
+});

@@ -1,8 +1,8 @@
 import { Space } from 'antd';
-import { useEffect } from 'react';
+import { memo, useEffect } from 'react';
 import { Outlet } from 'react-nest-router';
 
-export default function Layout() {
+export default memo(function Layout() {
   useEffect(() => {
     console.log('Layout Mounted');
 
@@ -17,4 +17,4 @@ export default function Layout() {
       <Outlet />
     </Space>
   );
-}
+});
