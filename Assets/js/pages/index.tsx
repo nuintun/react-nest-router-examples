@@ -15,6 +15,6 @@ if (__DEV__) {
   }
 
   on('ok', ({ builtAt }) => {
-    console.log(`[HMR index]: App is up to date at ${new Date(builtAt).toLocaleString()}.`);
+    console.log(`[HMR]: App is up to date at ${new Date(builtAt).toLocaleString()}.`);
   });
 }
