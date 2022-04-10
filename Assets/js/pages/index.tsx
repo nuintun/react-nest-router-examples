@@ -8,13 +8,13 @@ const root = createRoot(app as HTMLDivElement);
 root.render(<App />);
 
 if (__DEV__) {
-  if (module.hot) {
-    module.hot.accept(['./App.tsx'], () => {
+  if (import.meta.webpackHot) {
+    import.meta.webpackHot.accept(['./App.tsx'], () => {
       root.render(<App />);
     });
   }
 
   on('ok', ({ builtAt }) => {
-    console.log(`[HMR]: App is up to date at ${new Date(builtAt).toLocaleString()}.`);
+    console.info(`📌 %c[HMR]: App is up to date at ${new Date(builtAt).toLocaleString()}.`, 'color: #a6e22e;');
   });
 }
