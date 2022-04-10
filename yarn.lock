@@ -4904,9 +4904,9 @@ webpack-dev-middleware@^5.3.1:
     schema-utils "^4.0.0"
 
 webpack-dev-server-middleware@next:
-  version "0.10.0-dev.6"
-  resolved "https://registry.npmjs.org/webpack-dev-server-middleware/-/webpack-dev-server-middleware-0.10.0-dev.6.tgz#cecbb38d077058bfc1194e2eae7b057331534de5"
-  integrity sha512-RXpFbTxNr6P3dIPaSyzrjdiM5kVcVPDsJYADmI/RVIj1ALBY2XIgBr2C1dw8xVorFR3541ta8wgYygbmewOvTw==
+  version "0.10.0-dev.7"
+  resolved "https://registry.npmjs.org/webpack-dev-server-middleware/-/webpack-dev-server-middleware-0.10.0-dev.7.tgz#d17d0de5b8ab80bb426600585b455af58e30c502"
+  integrity sha512-N17cEBfeXS0b4vbDfuyMRWQpM1WyhRITYGT1e96ii3GnkQochVeG874bfCjBLiNBYtme6fdSLNb+Th+68aNXxg==
   dependencies:
     ansi-regex "^6.0.1"
     bufferutil "^4.0.6"
