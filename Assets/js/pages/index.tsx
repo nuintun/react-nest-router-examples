@@ -15,6 +15,6 @@ if (__DEV__) {
   }
 
   on('ok', ({ builtAt }) => {
-    console.info(`📌 %c[HMR]: App is up to date at ${new Date(builtAt).toLocaleString()}.`, 'color: #a6e22e;');
+    console.info(`📌 %c[HMR]: App is up to date at ${new Date(builtAt).toLocaleString()}.`, `color: #099160;`);
   });
 }

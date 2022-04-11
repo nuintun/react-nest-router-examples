@@ -1,7 +1,9 @@
 import '/css/global.less';
 
+import { Button, Result } from 'antd';
 import { Route, Router } from 'react-nest-router';
 import React, { lazy, memo, Suspense } from 'react';
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 
 const Home = lazy(() => import('/js/pages/Home'));
 const Login = lazy(() => import('/js/pages/Login'));
@@ -38,14 +40,46 @@ const routes: Route<{ id: number }, 'id'>[] = [
   }
 ];
 
+const ErrorFallback = memo(function ErrorFallback({ resetErrorBoundary }: FallbackProps) {
+  if (__DEV__) {
+    return (
+      <Result
+        status="error"
+        title="页面错误"
+        extra={
+          <Button type="primary" onClick={resetErrorBoundary}>
+            重试页面
+          </Button>
+        }
+        subTitle="抱歉，发生错误，无法渲染页面，请打开开发者工具查看错误信息！"
+      />
+    );
+  }
+
+  return (
+    <Result
+      status="error"
+      title="页面错误"
+      extra={
+        <Button type="primary" onClick={resetErrorBoundary}>
+          重试页面
+        </Button>
+      }
+      subTitle="抱歉，发生错误，无法渲染页面，请联系系统管理员或者重试页面！"
+    />
+  );
+});
+
 export default memo(function App(): React.ReactElement {
   return (
-    <div style={{ textAlign: 'center', paddingTop: 68 }}>
-      <Suspense fallback="loading...">
-        <Router routes={routes} context={{ message: 'Outlet Context' }}>
-          <NoMatch />
-        </Router>
-      </Suspense>
-    </div>
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <div style={{ textAlign: 'center', paddingTop: 68 }}>
+        <Suspense fallback="loading...">
+          <Router routes={routes} context={{ message: 'Outlet Context' }}>
+            <NoMatch />
+          </Router>
+        </Suspense>
+      </div>
+    </ErrorBoundary>
   );
 });
