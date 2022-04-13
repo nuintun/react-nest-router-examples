@@ -20,9 +20,9 @@ const webpack = require('webpack');
 const resolveIp = require('../lib/ip');
 const koaCompress = require('koa-compress');
 const { findFreePorts } = require('find-free-ports');
+const devMiddleware = require('koa-webpack-dev-service');
 const resolveConfigure = require('./webpack.config.base');
 const { publicPath, entryHTML } = require('../configure');
-const devMiddleware = require('koa-webpack-server-middleware');
 
 function createMemfs() {
   const volume = new memfs.Volume();

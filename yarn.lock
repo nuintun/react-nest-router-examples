@@ -1934,9 +1934,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001317:
-  version "1.0.30001328"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001328.tgz#0ed7a2ca65ec45872c613630201644237ba1e329"
-  integrity sha512-Ue55jHkR/s4r00FLNiX+hGMMuwml/QGqqzVeMQ5thUewznU2EdULFvI3JR7JJid6OrjJNfFvHY2G2dIjmRaDDQ==
+  version "1.0.30001331"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001331.tgz#41048f2a5cf0c3c6198f40207cd323388b3d4399"
+  integrity sha512-Y1xk6paHpUXKP/P6YjQv1xqyTbgAP05ycHBcRdQjTcyXlWol868sJJPlmk5ylOekw2BrucWes5jk+LvVd7WZ5Q==
 
 case-sensitive-paths-webpack-plugin@^2.4.0:
   version "2.4.0"
@@ -3155,10 +3155,10 @@ koa-convert@^2.0.0:
     co "^4.6.0"
     koa-compose "^4.1.0"
 
-koa-files@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npmjs.org/koa-files/-/koa-files-2.1.0.tgz#e6674430154a7ee276020685732177239cea0e14"
-  integrity sha512-oBuupQmaqWp87T+TQBBB5P61fy2zJTWAS1qrXCIerwDab4MGidqkL4MvyVflYmd1Z5gkp40jwHSgCLtIpsQDlA==
+koa-files@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/koa-files/-/koa-files-2.1.1.tgz#af43dde7c454b3347566331ae3edcefb13cc03ba"
+  integrity sha512-WcTw+dDWLF4Vj6DSgwwfRkxjxgsMarWWUXtIz9zDgLpFVmamdMnhKFlS3K8tqbE2krKkPsYPIwSKQzfP5WKfnA==
   dependencies:
     destroy "^1.2.0"
     etag "^1.8.1"
@@ -3170,10 +3170,10 @@ koa-is-json@^1.0.0:
   resolved "https://registry.npmjs.org/koa-is-json/-/koa-is-json-1.0.0.tgz#273c07edcdcb8df6a2c1ab7d59ee76491451ec14"
   integrity sha1-JzwH7c3Ljfaiwat9We52SRRR7BQ=
 
-koa-webpack-server-middleware@^0.1.0:
+koa-webpack-dev-service@^0.1.0:
   version "0.1.0"
-  resolved "https://registry.npmjs.org/koa-webpack-server-middleware/-/koa-webpack-server-middleware-0.1.0.tgz#d71b9d4ed9fdccf60a7a170d2427924bd0b62e4f"
-  integrity sha512-8CggfHoWs1hjAlivs6TKfPKMsiqGeO3IRSI0rg9R1ub9GITOz9++4YXM6VbHgNq/KR7CGjC6hBdHoDu9z+cZcw==
+  resolved "https://registry.npmjs.org/koa-webpack-dev-service/-/koa-webpack-dev-service-0.1.0.tgz#3959b34d059a76a3348b91b9caae29d220810607"
+  integrity sha512-m6cPUu3mQufIZ4vO7wj8pbxw2MLcum1owETc4FLhBE89U6nMuKrP0465urC3yC5WY7nVDASKGvxCxyODDKRNSw==
   dependencies:
     "@types/koa" "^2.13.4"
     "@types/ws" "^8.5.3"
