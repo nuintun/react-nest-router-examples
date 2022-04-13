@@ -3170,6 +3170,21 @@ koa-is-json@^1.0.0:
   resolved "https://registry.npmjs.org/koa-is-json/-/koa-is-json-1.0.0.tgz#273c07edcdcb8df6a2c1ab7d59ee76491451ec14"
   integrity sha1-JzwH7c3Ljfaiwat9We52SRRR7BQ=
 
+koa-webpack-server-middleware@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/koa-webpack-server-middleware/-/koa-webpack-server-middleware-0.1.0.tgz#d71b9d4ed9fdccf60a7a170d2427924bd0b62e4f"
+  integrity sha512-8CggfHoWs1hjAlivs6TKfPKMsiqGeO3IRSI0rg9R1ub9GITOz9++4YXM6VbHgNq/KR7CGjC6hBdHoDu9z+cZcw==
+  dependencies:
+    "@types/koa" "^2.13.4"
+    "@types/ws" "^8.5.3"
+    ansi-regex "^6.0.1"
+    bufferutil "^4.0.6"
+    core-js "^3.21.1"
+    koa-compose "^4.1.0"
+    utf-8-validate "^5.0.9"
+    webpack-dev-middleware "^5.3.1"
+    ws "^8.5.0"
+
 koa@^2.13.4:
   version "2.13.4"
   resolved "https://registry.npmjs.org/koa/-/koa-2.13.4.tgz#ee5b0cb39e0b8069c38d115139c774833d32462e"
@@ -5028,21 +5043,6 @@ webpack-dev-middleware@^5.3.1:
     mime-types "^2.1.31"
     range-parser "^1.2.1"
     schema-utils "^4.0.0"
-
-webpack-dev-server-middleware@^0.11.3:
-  version "0.11.3"
-  resolved "https://registry.npmjs.org/webpack-dev-server-middleware/-/webpack-dev-server-middleware-0.11.3.tgz#74fad17498347734492194c993d9c14264da84ad"
-  integrity sha512-Umb8apbQjxoni4xXmvU0N3Cea7XjaRQhscgmnCtM1ZZ3JWfODhdmKDi3jv7UUr7wsXGdX60AtLxvnl3QNGbSbw==
-  dependencies:
-    "@types/koa" "^2.13.4"
-    "@types/ws" "^8.5.3"
-    ansi-regex "^6.0.1"
-    bufferutil "^4.0.6"
-    core-js "^3.21.1"
-    koa-compose "^4.1.0"
-    utf-8-validate "^5.0.9"
-    webpack-dev-middleware "^5.3.1"
-    ws "^8.5.0"
 
 webpack-sources@^3.2.3:
   version "3.2.3"

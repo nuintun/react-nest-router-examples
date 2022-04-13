@@ -22,7 +22,7 @@ const koaCompress = require('koa-compress');
 const { findFreePorts } = require('find-free-ports');
 const resolveConfigure = require('./webpack.config.base');
 const { publicPath, entryHTML } = require('../configure');
-const devMiddleware = require('webpack-dev-server-middleware');
+const devMiddleware = require('koa-webpack-server-middleware');
 
 function createMemfs() {
   const volume = new memfs.Volume();
