@@ -5,8 +5,8 @@ import { Route, Router } from 'react-nest-router';
 import React, { lazy, memo, Suspense } from 'react';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 
-const Home = lazy(() => import('/js/pages/Home'));
-const Login = lazy(() => import('/js/pages/Login'));
+const Home = lazy(() => import('/js/pages/home/index'));
+const Login = lazy(() => import('/js/pages/login/index'));
 const Layout = lazy(() => import('/js/components/Layout'));
 const NoMatch = lazy(() => import('/js/components/NoMatch'));
 const Courses = lazy(() => import('/js/components/Courses'));

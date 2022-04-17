@@ -1,3 +1,5 @@
+import styles from '/css/login/index.module.less';
+
 import { memo, useEffect } from 'react';
 
 export default memo(function Login() {
@@ -9,5 +11,5 @@ export default memo(function Login() {
     };
   }, []);
 
-  return <div>Login</div>;
+  return <div className={styles.main}>Login</div>;
 });
