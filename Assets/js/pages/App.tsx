@@ -1,9 +1,12 @@
 import '/css/global.less';
+import styles from '/css/App.module.less';
 
-import { Button, Result } from 'antd';
+import { Button, Result, Space } from 'antd';
 import { Route, Router } from 'react-nest-router';
 import React, { lazy, memo, Suspense } from 'react';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
+
+import react from '/images/react.svg?url';
 
 const Home = lazy(() => import('/js/pages/home/index'));
 const Login = lazy(() => import('/js/pages/login/index'));
@@ -73,13 +76,14 @@ const ErrorFallback = memo(function ErrorFallback({ resetErrorBoundary }: Fallba
 export default memo(function App(): React.ReactElement {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <div style={{ textAlign: 'center', paddingTop: 68 }}>
+      <Space className={styles.app} direction="vertical">
+        <img className={styles.react} src={react} alt="react" />
         <Suspense fallback="loading...">
           <Router routes={routes} context={{ message: 'Outlet Context' }}>
             <NoMatch />
           </Router>
         </Suspense>
-      </div>
+      </Space>
     </ErrorBoundary>
   );
 });
