@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "antd": "^4.20.1",
-    "core-js": "^3.22.2",
+    "core-js": "^3.22.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-error-boundary": "^3.1.4",
@@ -68,7 +68,7 @@
     "koa": "^2.13.4",
     "koa-compress": "^5.1.0",
     "koa-files": "^2.1.2",
-    "koa-webpack-dev-service": "^0.2.5",
+    "koa-webpack-dev-service": "^0.2.6",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "memfs": "^3.4.1",
