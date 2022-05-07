@@ -3,13 +3,11 @@
  * @description PostCSS 配置
  */
 
-'use strict';
-
-const autoprefixer = require('autoprefixer');
+import autoprefixer from 'autoprefixer';
 
 const sourceMap = process.env.NODE_ENV !== 'production';
 
-module.exports = {
+export default {
   sourceMap,
   plugins: [
     autoprefixer({
