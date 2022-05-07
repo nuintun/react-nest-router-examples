@@ -3169,10 +3169,10 @@ koa-convert@^2.0.0:
     co "^4.6.0"
     koa-compose "^4.1.0"
 
-koa-files@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.npmjs.org/koa-files/-/koa-files-2.1.2.tgz#bbfc264bbd526972ec3cfd9f5a0b0902a36ccc45"
-  integrity sha512-usbVdWRPLgaAgJ25Nva5zy4aY8lnTlcc9cYwxdnLMXF7GxZOnW1W44l+8wcDq6l2nDH7h/yA4G9AzenhmPyXCQ==
+koa-files@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/koa-files/-/koa-files-2.2.0.tgz#2866436a2fb0da7ac2dbfb7cb62d7ec74977a16a"
+  integrity sha512-Ki3Oe3DP/pdKT/7GVWrLd7icwg5YIS1IPq3OfGNxmKi35mVdpPwTKymb5Q2m3NhUcDKpAJ1DQyT5wlknVFkuRA==
   dependencies:
     destroy "^1.2.0"
     etag "^1.8.1"
