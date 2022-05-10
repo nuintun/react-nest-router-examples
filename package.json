@@ -13,7 +13,7 @@
     "prod": "node webpack/bin/webpack.config.prod.mjs",
     "watch": "nodemon webpack/bin/webpack.config.server.mjs",
     "report": "node webpack/bin/webpack.config.prod.mjs --report",
-    "format": "prettier --write .babelrc.mjs .postcssrc.mjs webpack Assets"
+    "format": "prettier --write .babelrc.js .postcssrc.js webpack Assets"
   },
   "author": {
     "name": "nuintun",
