@@ -1,19 +1,20 @@
 {
   "name": "react-nest-router-examples",
   "version": "1.0.0",
-  "private": true,
   "description": "React nest router examples.",
+  "private": true,
+  "type": "module",
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=16.0.0"
   },
   "scripts": {
     "lint": "tsc --noEmit",
-    "start": "node server.mjs",
-    "dev": "node webpack/bin/webpack.config.dev.mjs",
-    "prod": "node webpack/bin/webpack.config.prod.mjs",
-    "watch": "nodemon webpack/bin/webpack.config.server.mjs",
-    "report": "node webpack/bin/webpack.config.prod.mjs --report",
-    "format": "prettier --write .babelrc.js .postcssrc.js webpack Assets"
+    "start": "node server.js",
+    "dev": "node webpack/bin/webpack.config.dev.js",
+    "prod": "node webpack/bin/webpack.config.prod.js",
+    "watch": "nodemon webpack/bin/webpack.config.server.js",
+    "report": "node webpack/bin/webpack.config.prod.js --report",
+    "format": "prettier --write .babelrc.cjs .postcssrc.cjs server.js webpack Assets"
   },
   "author": {
     "name": "nuintun",

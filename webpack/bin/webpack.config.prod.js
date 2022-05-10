@@ -15,7 +15,7 @@ process.env.BABEL_ENV = mode;
 
 import webpack from 'webpack';
 import TerserPlugin from 'terser-webpack-plugin';
-import resolveConfigure from './webpack.config.base.mjs';
+import resolveConfigure from './webpack.config.base.js';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 

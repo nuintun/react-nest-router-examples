@@ -7,8 +7,8 @@
 
 import webpack from 'webpack';
 import { createRequire } from 'module';
-import configure from '../configure.mjs';
-import resolveRules from '../lib/rules.mjs';
+import configure from '../configure.js';
+import resolveRules from '../lib/rules.js';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';

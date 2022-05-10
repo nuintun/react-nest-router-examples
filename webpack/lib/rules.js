@@ -6,8 +6,8 @@
  */
 
 import fs from 'fs';
-import less2js from './less2js.mjs';
-import configure from '../configure.mjs';
+import less2js from './less2js.js';
+import configure from '../configure.js';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 /**

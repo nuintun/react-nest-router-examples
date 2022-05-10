@@ -17,12 +17,12 @@ import Koa from 'koa';
 import path from 'path';
 import memfs from 'memfs';
 import webpack from 'webpack';
-import resolveIp from '../lib/ip.mjs';
+import resolveIp from '../lib/ip.js';
 import koaCompress from 'koa-compress';
-import configure from '../configure.mjs';
+import configure from '../configure.js';
 import { findFreePorts } from 'find-free-ports';
 import devMiddleware from 'koa-webpack-dev-service';
-import resolveConfigure from './webpack.config.base.mjs';
+import resolveConfigure from './webpack.config.base.js';
 
 const { publicPath, entryHTML } = configure;
 
