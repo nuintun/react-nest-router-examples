@@ -3,6 +3,8 @@
  * @description Babel 配置
  */
 
+'use strict';
+
 const corejs = { version: '^3.0.0', proposals: true };
 const development = process.env.BABEL_ENV !== 'production';
 const imports = { style: true, libraryName: 'antd', libraryDirectory: 'es' };
