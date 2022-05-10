@@ -1932,9 +1932,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001332, caniuse-lite@^1.0.30001335:
-  version "1.0.30001338"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001338.tgz#b5dd7a7941a51a16480bdf6ff82bded1628eec0d"
-  integrity sha512-1gLHWyfVoRDsHieO+CaeYe7jSo/MT7D7lhaXUiwwbuR5BwQxORs0f1tAwUSQr3YbxRXJvxHM/PA5FfPQRnsPeQ==
+  version "1.0.30001339"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001339.tgz#f9aece4ea8156071613b27791547ba0b33f176cf"
+  integrity sha512-Es8PiVqCe+uXdms0Gu5xP5PF2bxLR7OBp3wUzUnuO7OHzhOfCyg3hdiGWVPVxhiuniOzng+hTc1u3fEQ0TlkSQ==
 
 case-sensitive-paths-webpack-plugin@^2.4.0:
   version "2.4.0"
@@ -3169,10 +3169,10 @@ koa-convert@^2.0.0:
     co "^4.6.0"
     koa-compose "^4.1.0"
 
-koa-files@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.npmjs.org/koa-files/-/koa-files-2.2.0.tgz#2866436a2fb0da7ac2dbfb7cb62d7ec74977a16a"
-  integrity sha512-Ki3Oe3DP/pdKT/7GVWrLd7icwg5YIS1IPq3OfGNxmKi35mVdpPwTKymb5Q2m3NhUcDKpAJ1DQyT5wlknVFkuRA==
+koa-files@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/koa-files/-/koa-files-2.3.0.tgz#3bbe7b2cfd1898851bb65e71b155106921cc4c55"
+  integrity sha512-WZDX25Qa17dozuac+8z504naO71yeLAb1qp0S3HQceXhauSFz2cPMcsPBlG1p9mDD0Y4dJo7IGuXICdvHMhytw==
   dependencies:
     destroy "^1.2.0"
     etag "^1.8.1"
