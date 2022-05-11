@@ -13,8 +13,8 @@
     "dev": "node webpack/bin/webpack.config.dev.js",
     "prod": "node webpack/bin/webpack.config.prod.js",
     "watch": "nodemon webpack/bin/webpack.config.server.js",
-    "report": "node webpack/bin/webpack.config.prod.js --report",
-    "format": "prettier --write .babelrc.cjs .postcssrc.cjs server.js webpack Assets"
+    "format": "prettier --write *.js *.ts *.cjs webpack Assets",
+    "report": "node webpack/bin/webpack.config.prod.js --report"
   },
   "author": {
     "name": "nuintun",
@@ -29,9 +29,9 @@
     "quiet": true,
     "delay": "100ms",
     "watch": [
-      ".babelrc.mjs",
       "webpack/**/*",
-      ".postcssrc.mjs",
+      ".babelrc.cjs",
+      ".postcssrc.cjs",
       "wwwroot/favicon.ico",
       "Assets/css/theme.less"
     ]
