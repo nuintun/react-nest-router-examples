@@ -10,10 +10,10 @@
   "scripts": {
     "lint": "tsc --noEmit",
     "start": "node server.js",
+    "format": "prettier --write .",
     "dev": "node webpack/bin/webpack.config.dev.js",
     "prod": "node webpack/bin/webpack.config.prod.js",
     "watch": "nodemon webpack/bin/webpack.config.server.js",
-    "format": "prettier --write *.js *.ts *.cjs webpack Assets",
     "report": "node webpack/bin/webpack.config.prod.js --report"
   },
   "author": {
@@ -37,7 +37,7 @@
     ]
   },
   "dependencies": {
-    "antd": "^4.20.4",
+    "antd": "^4.20.5",
     "core-js": "^3.22.5",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -45,12 +45,12 @@
     "react-nest-router": "^0.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.10",
-    "@babel/plugin-proposal-decorators": "^7.17.9",
-    "@babel/plugin-transform-runtime": "^7.17.10",
-    "@babel/preset-env": "^7.17.10",
-    "@babel/preset-react": "^7.16.7",
-    "@babel/preset-typescript": "^7.16.7",
+    "@babel/core": "^7.17.12",
+    "@babel/plugin-proposal-decorators": "^7.17.12",
+    "@babel/plugin-transform-runtime": "^7.17.12",
+    "@babel/preset-env": "^7.17.12",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
     "@svgr/webpack": "^6.2.1",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
@@ -71,8 +71,8 @@
     "koa-files": "^2.3.0",
     "koa-webpack-dev-service": "^0.5.0",
     "less": "^4.1.2",
-    "less-loader": "^10.2.0",
-    "memfs": "^3.4.1",
+    "less-loader": "^11.0.0",
+    "memfs": "^3.4.3",
     "mini-css-extract-plugin": "^2.6.0",
     "nodemon": "^2.0.16",
     "postcss": "^8.4.13",
