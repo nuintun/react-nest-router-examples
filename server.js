@@ -11,7 +11,11 @@ const app = new Koa();
 
 app.use(compress({ br: false }));
 
-app.use(files('wwwroot'));
+app.use(
+  files('wwwroot', {
+    cacheControl: 'public, max-age=31536000'
+  })
+);
 
 app.use(async ctx => {
   ctx.type = 'text/html';
