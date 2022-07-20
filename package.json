@@ -37,7 +37,7 @@
     ]
   },
   "dependencies": {
-    "antd": "^4.21.6",
+    "antd": "^4.21.7",
     "core-js": "^3.23.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -45,13 +45,13 @@
     "react-nest-router": "^0.7.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.6",
-    "@babel/plugin-proposal-decorators": "^7.18.6",
-    "@babel/plugin-transform-runtime": "^7.18.6",
-    "@babel/preset-env": "^7.18.6",
+    "@babel/core": "^7.18.9",
+    "@babel/plugin-proposal-decorators": "^7.18.9",
+    "@babel/plugin-transform-runtime": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
-    "@svgr/webpack": "^6.2.1",
+    "@svgr/webpack": "^6.3.0",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@types/react-router-dom": "^5.3.3",
