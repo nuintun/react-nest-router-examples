@@ -12,15 +12,12 @@ process.env.NODE_ENV = mode;
 process.env.BABEL_ENV = mode;
 
 import webpack from 'webpack';
-import configure from '../configure.js';
 import resolveConfigure from './webpack.config.base.js';
-
-const { watchOptions } = configure;
 
 (async () => {
   const configure = await resolveConfigure(mode);
 
-  configure.watchOptions = watchOptions;
+  configure.cache.name = 'dev';
   configure.devtool = 'eval-cheap-module-source-map';
 
   configure.plugins.push(new webpack.SourceMapDevToolPlugin());

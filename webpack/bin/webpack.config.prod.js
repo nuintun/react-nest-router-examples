@@ -6,8 +6,6 @@
  * @see https://github.com/facebook/create-react-app
  */
 
-'use strict';
-
 const mode = 'production';
 
 process.env.NODE_ENV = mode;
@@ -23,9 +21,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
   const configure = await resolveConfigure(mode);
 
   configure.devtool = false;
-
-  configure.plugins.push(new webpack.optimize.AggressiveMergingPlugin());
-
+  configure.cache.name = 'prod';
   configure.optimization.minimizer = [new CssMinimizerPlugin(), new TerserPlugin()];
 
   // 开启 webpack-bundle-analyzer 分析工具

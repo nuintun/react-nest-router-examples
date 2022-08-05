@@ -18,12 +18,14 @@ import path from 'path';
 import memfs from 'memfs';
 import webpack from 'webpack';
 import resolveIp from '../lib/ip.js';
+import { URLSearchParams } from 'url';
 import koaCompress from 'koa-compress';
 import configure from '../configure.js';
 import { findFreePorts } from 'find-free-ports';
 import devMiddleware from 'koa-webpack-dev-service';
 import resolveConfigure from './webpack.config.base.js';
 
+const { toString } = Object.prototype;
 const { publicPath, entryHTML } = configure;
 
 function createMemfs() {
@@ -33,6 +35,10 @@ function createMemfs() {
   fs.join = path.join.bind(path);
 
   return fs;
+}
+
+function isTypeof(value, type) {
+  return toString.call(value).toLowerCase() === `[object ${type.toLowerCase()}]`;
 }
 
 async function resolvePort(startPort = 8000, endPort = 9000) {
@@ -45,6 +51,44 @@ function httpError(error) {
   return /^(EOF|EPIPE|ECANCELED|ECONNRESET|ECONNABORTED)$/i.test(error.code);
 }
 
+function injectHotEntry(entry, options) {
+  const params = new URLSearchParams(options);
+  const hotEntry = `koa-webpack-dev-service/client?${params}`;
+
+  if (Array.isArray(entry)) {
+    return [hotEntry, ...entry];
+  }
+
+  if (isTypeof(entry, 'string')) {
+    return [hotEntry, entry];
+  }
+
+  return entry;
+}
+
+async function resolveEntry(entry, options) {
+  if (typeof entry === 'function') entry = entry();
+
+  if (typeof entry === 'function') entry = await entry();
+
+  if (isTypeof(entry, 'object')) {
+    const entries = {};
+    const entryIterable = Object.entries(entry);
+
+    for (const [name, entry] of entryIterable) {
+      if (isTypeof(entry, 'object')) {
+        entries[name] = { ...entry, import: injectHotEntry(entry.import, options) };
+      } else {
+        entries[name] = injectHotEntry(entry, options);
+      }
+    }
+
+    return entries;
+  }
+
+  return injectHotEntry(entry, options);
+}
+
 (async () => {
   const fs = createMemfs();
   const ip = await resolveIp();
@@ -52,20 +96,22 @@ function httpError(error) {
   const devServerHost = `http://${ip}:${port}`;
   const configure = await resolveConfigure(mode);
   const devServerPublicPath = devServerHost + publicPath;
+  const entry = await resolveEntry(configure.entry, { host: `${ip}:${port}` });
 
+  configure.entry = entry;
+  configure.cache.name = 'server';
   configure.output.publicPath = devServerPublicPath;
   configure.devtool = 'eval-cheap-module-source-map';
   configure.watchOptions = { aggregateTimeout: 256 };
-  configure.cache.name = `${configure.name}-${configure.mode}-server`;
 
   configure.plugins.push(new webpack.SourceMapDevToolPlugin());
 
   const app = new Koa();
   const compiler = webpack(configure);
-  const logger = compiler.getInfrastructureLogger('webpack-dev-middleware');
 
   app.use(async (ctx, next) => {
     ctx.set({
+      'Cache-Control': 'no-store',
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': '*',
       'Access-Control-Allow-Headers': '*',
@@ -87,7 +133,6 @@ function httpError(error) {
 
   app.use(async ctx => {
     ctx.type = 'text/html; charset=utf-8';
-
     ctx.body = fs.readFileSync(entryHTML);
   });
 
@@ -97,6 +142,8 @@ function httpError(error) {
 
   app.listen(port, () => {
     devServer.waitUntilValid(() => {
+      const { logger } = devServer.context;
+
       logger.info(`server run at: \u001B[36m${devServerHost}\u001B[0m`);
     });
   });
