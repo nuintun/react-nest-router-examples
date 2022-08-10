@@ -37,12 +37,12 @@
     ]
   },
   "dependencies": {
-    "antd": "^4.22.3",
+    "antd": "^4.22.4",
     "core-js": "^3.24.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^3.1.4",
-    "react-nest-router": "^0.9.3"
+    "react-nest-router": "^0.9.4"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -52,7 +52,7 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@svgr/webpack": "^6.3.1",
-    "@types/react": "^18.0.15",
+    "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@types/react-router-dom": "^5.3.3",
     "@types/throttle-debounce": "^5.0.0",
@@ -75,7 +75,7 @@
     "memfs": "^3.4.7",
     "mini-css-extract-plugin": "^2.6.1",
     "nodemon": "^2.0.19",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.16",
     "postcss-loader": "^7.0.1",
     "prettier": "^2.7.1",
     "style-loader": "^3.3.1",
