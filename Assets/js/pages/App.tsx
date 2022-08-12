@@ -19,15 +19,15 @@ const CoursesDetails = lazy(() => import('/js/pages/courses/Details'));
 
 const routes: Route<{ id: number }, 'id'>[] = [
   {
-    path: '/',
     element: <Navigation />,
     children: [
       {
-        path: 'login',
+        path: '/login',
         meta: { id: 1 },
         element: <Login />
       },
       {
+        path: '/',
         meta: { id: 2 },
         element: <Layout />,
         children: [
