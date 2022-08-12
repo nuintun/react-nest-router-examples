@@ -3,6 +3,8 @@ import { memo, useEffect } from 'react';
 import { Outlet, useOutletContext } from 'react-nest-router';
 
 export default memo(function Courses() {
+  const context = useOutletContext();
+
   useEffect(() => {
     console.log('Courses Mounted');
 
@@ -11,7 +13,9 @@ export default memo(function Courses() {
     };
   }, []);
 
-  console.log('Courses:', useOutletContext<{ message: string }>());
+  useEffect(() => {
+    console.log('Courses Context:', context);
+  });
 
   return (
     <Space direction="vertical">

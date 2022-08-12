@@ -6,6 +6,7 @@ export default memo(function Navigation() {
   const matches = useMatches();
   const resolve = useResolve();
   const navigate = useNavigate();
+  const context = useOutletContext();
 
   useEffect(() => {
     console.log('Navigation Mounted');
@@ -15,13 +16,15 @@ export default memo(function Navigation() {
     };
   }, []);
 
-  console.log('Navigation:', useOutletContext());
+  useEffect(() => {
+    console.log('Navigation Context:', context);
+  });
 
   const go = useCallback((href: string) => {
     return (e: React.MouseEvent) => {
       e.preventDefault();
 
-      navigate<{ message: string }>(href, { state: { message: 'Location State' } });
+      navigate(href, { state: { message: 'Location State' } });
     };
   }, []);
 

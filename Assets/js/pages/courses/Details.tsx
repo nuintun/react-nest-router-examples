@@ -10,10 +10,12 @@ export default memo(function CoursesDetails() {
     };
   }, []);
 
+  const location = useLocation();
   const params = useParams<'id'>();
-  const location = useLocation<{ message: string }>();
 
-  console.log('Courses Details:', location.state);
+  useEffect(() => {
+    console.log('Courses Details State:', location.state);
+  });
 
   return <div>Courses Details {params.id}</div>;
 });
