@@ -28,12 +28,12 @@ export default memo(function Navigation() {
   return (
     <Space direction="vertical">
       <Space>
-        <a href={resolve('/')} onClick={go('/')}>
-          Home
-        </a>
-        <Divider type="vertical" />
         <a href={'/login'} onClick={go('/login')}>
           Login
+        </a>
+        <Divider type="vertical" />
+        <a href={resolve('/')} onClick={go('/')}>
+          Home
         </a>
         <Divider type="vertical" />
         <a href={resolve('/courses')} onClick={go('/courses')}>
