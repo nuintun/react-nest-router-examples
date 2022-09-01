@@ -42,7 +42,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^3.1.4",
-    "react-nest-router": "^0.12.1"
+    "react-nest-router": "^0.12.2"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
@@ -52,7 +52,7 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@svgr/webpack": "^6.3.1",
-    "@types/react": "^18.0.17",
+    "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
     "@types/react-router-dom": "^5.3.3",
     "@types/throttle-debounce": "^5.0.0",
@@ -79,7 +79,7 @@
     "postcss-loader": "^7.0.1",
     "prettier": "^2.7.1",
     "style-loader": "^3.3.1",
-    "terser-webpack-plugin": "^5.3.5",
+    "terser-webpack-plugin": "^5.3.6",
     "typescript": "^4.8.2",
     "webpack": "^5.74.0",
     "webpack-bundle-analyzer": "^4.6.1"
