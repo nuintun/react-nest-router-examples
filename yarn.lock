@@ -1342,9 +1342,9 @@
   integrity sha512-FyAOrDuQmBi8/or3ns4rwPno7/9tJTijVW6aQQjK02+kOQ8zmoNg2XJtAuQhvQcy1ASJq38wirX5//9J1EqoUA==
 
 "@types/http-errors@*":
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/@types/http-errors/-/http-errors-2.0.0.tgz#c1f34eee7f9fd5ddee366d15e2fc39b93c31532a"
-  integrity sha512-6mkB8Gx7Of1yjqqh1nLH22ATNol5+mIXVFaQCOQY+R3JxB6/soiqKAxBgdSE6R/1IWu69rR4cJ/027TxLEs/Vg==
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/@types/http-errors/-/http-errors-2.0.1.tgz#20172f9578b225f6c7da63446f56d4ce108d5a65"
+  integrity sha512-/K3ds8TRAfBvi5vfjuz8y6+GiAYBZ0x4tXv1Av6CWBWn0IlADc+ZX9pMq7oU0fNQPnBwIZl3rmeLp6SBApbxSQ==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.4"
@@ -1793,10 +1793,10 @@ autoprefixer@^10.4.13:
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
 
-babel-loader@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.npmjs.org/babel-loader/-/babel-loader-9.0.0.tgz#b90f48b49f5360e4678733755d1413e16cfee48e"
-  integrity sha512-qVGQb0PNw/B1sGhPf0/KKsHZAPfa2Bk+JbjkW7yGjAHZyvjAULXYq0et0+/+7DL/rGYU+y8UoGPzA32NP29pVQ==
+babel-loader@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.npmjs.org/babel-loader/-/babel-loader-9.0.1.tgz#d473f30a6ffc2f2abca610c01775c40fc5c2a970"
+  integrity sha512-szYjslOXFlj/po5KfrVmiuBAcI6GVHFuAgC96Qd6mMPHdwl4lmAJkYtvjQ1RxxPjgdkKjd3LQgXDE4jxEutNuw==
   dependencies:
     find-cache-dir "^3.3.2"
     schema-utils "^4.0.0"
@@ -4114,12 +4114,12 @@ react-is@^16.12.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-nest-router@^0.12.9:
-  version "0.12.9"
-  resolved "https://registry.npmjs.org/react-nest-router/-/react-nest-router-0.12.9.tgz#94f5e4588151a45b5f9caac17facaf50955e020b"
-  integrity sha512-nXcxoibtg4V/6RlK4BTctZb1SH+KcyUteA7/EraM3pnCS/Yyq/u1MdpRR1FBJRmn9Vh8cKX6xdYRB7aBaFo+sg==
+react-nest-router@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.npmjs.org/react-nest-router/-/react-nest-router-0.13.0.tgz#c6719358792d85a745d82dec0110034d5fd0bb8e"
+  integrity sha512-g+c76suQDa+eAIGq74L7Ud5IAn6QYCeneuVmC13jHVQKwBKrlVN1Tcuhv4uBb9Sf7ef8Os8usPNby3rsXLIoGA==
   dependencies:
-    tslib "^2.4.0"
+    tslib "^2.4.1"
 
 react@^18.2.0:
   version "18.2.0"
@@ -4514,10 +4514,10 @@ touch@^3.1.0:
   dependencies:
     nopt "~1.0.10"
 
-tslib@^2.0.3, tslib@^2.3.0, tslib@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
-  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
+tslib@^2.0.3, tslib@^2.3.0, tslib@^2.4.0, tslib@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
+  integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==
 
 tsscmp@1.0.6:
   version "1.0.6"
