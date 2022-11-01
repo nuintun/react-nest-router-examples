@@ -42,7 +42,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^3.1.4",
-    "react-nest-router": "^0.13.0"
+    "react-nest-router": "^0.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
@@ -61,13 +61,13 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "4.2.2",
-    "css-modules-types-loader": "^0.3.7",
+    "css-modules-types-loader": "^0.3.8",
     "find-free-ports": "^3.0.0",
     "html-webpack-plugin": "^5.5.0",
     "koa": "^2.13.4",
     "koa-compress": "^5.1.0",
     "koa-files": "^2.3.0",
-    "koa-webpack-dev-service": "^0.7.2",
+    "koa-webpack-dev-service": "^0.7.3",
     "less": "^4.1.3",
     "less-loader": "^11.1.0",
     "memfs": "^3.4.9",
