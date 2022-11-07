@@ -31,7 +31,7 @@ export default memo(function Navigation() {
   return (
     <Space direction="vertical">
       <Space>
-        <a href={'/login'} onClick={go('/login')}>
+        <a href={resolve('/login')} onClick={go('/login')}>
           Login
         </a>
         <Divider type="vertical" />
