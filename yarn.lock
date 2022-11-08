@@ -78,9 +78,9 @@
     semver "^6.3.0"
 
 "@babel/generator@^7.20.1", "@babel/generator@^7.20.2":
-  version "7.20.2"
-  resolved "https://registry.npmjs.org/@babel/generator/-/generator-7.20.2.tgz#c2e89e22613a039285c1e7b749e2cd0b30b9a481"
-  integrity sha512-SD75PMIK6i9H8G/tfGvB4KKl4Nw6Ssos9nGgYwxbgyTP0iX/Z55DveoH86rmUB/YHTQQ+ZC0F7xxaY8l2OF44Q==
+  version "7.20.3"
+  resolved "https://registry.npmjs.org/@babel/generator/-/generator-7.20.3.tgz#e58c9ae2f7bf7fdf4899160cf1e04400a82cd641"
+  integrity sha512-Wl5ilw2UD1+ZYprHVprxHZJCFeBWlzZYOovE4SDYLZnqCOD11j+0QzNeEWKLLTWM7nixrZEh7vNIyb76MyJg3A==
   dependencies:
     "@babel/types" "^7.20.2"
     "@jridgewell/gen-mapping" "^0.3.2"
@@ -297,9 +297,9 @@
     js-tokens "^4.0.0"
 
 "@babel/parser@^7.18.10", "@babel/parser@^7.20.1", "@babel/parser@^7.20.2":
-  version "7.20.2"
-  resolved "https://registry.npmjs.org/@babel/parser/-/parser-7.20.2.tgz#9aeb9b92f64412b5f81064d46f6a1ac0881337f4"
-  integrity sha512-afk318kh2uKbo7BEj2QtEi8HVCGrwHUffrYDy7dgVcSa2j9lY3LDjPzcyGdpX7xgm35aWqvciZJ4WKmdF/SxYg==
+  version "7.20.3"
+  resolved "https://registry.npmjs.org/@babel/parser/-/parser-7.20.3.tgz#5358cf62e380cf69efcb87a7bb922ff88bfac6e2"
+  integrity sha512-OP/s5a94frIPXwjzEcv5S/tpQfc6XhxYUnmWpgdqMWGgYCuErA3SzozaRAMQgSZWKeTJxht9aWAkUY+0UzvOFg==
 
 "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@^7.18.6":
   version "7.18.6"
@@ -754,11 +754,11 @@
     "@babel/helper-replace-supers" "^7.18.6"
 
 "@babel/plugin-transform-parameters@^7.20.1":
-  version "7.20.1"
-  resolved "https://registry.npmjs.org/@babel/plugin-transform-parameters/-/plugin-transform-parameters-7.20.1.tgz#9a5aa370fdcce36f110455e9369db7afca0f9eeb"
-  integrity sha512-nDvKLrAvl+kf6BOy1UJ3MGwzzfTMgppxwiD2Jb4LO3xjYyZq30oQzDNJbCQpMdG9+j2IXHoiMrw5Cm/L6ZoxXQ==
+  version "7.20.3"
+  resolved "https://registry.npmjs.org/@babel/plugin-transform-parameters/-/plugin-transform-parameters-7.20.3.tgz#7b3468d70c3c5b62e46be0a47b6045d8590fb748"
+  integrity sha512-oZg/Fpx0YDrj13KsLyO8I/CX3Zdw7z0O9qOd95SqcoIzuqy/WTGWvePeHAnZCN54SfdyjHcb1S30gc8zlzlHcA==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.19.0"
+    "@babel/helper-plugin-utils" "^7.20.2"
 
 "@babel/plugin-transform-property-literals@^7.18.6":
   version "7.18.6"
@@ -2857,9 +2857,9 @@ jest-worker@^27.4.5:
     supports-color "^8.0.0"
 
 jest-worker@^29.1.2:
-  version "29.2.1"
-  resolved "https://registry.npmjs.org/jest-worker/-/jest-worker-29.2.1.tgz#8ba68255438252e1674f990f0180c54dfa26a3b1"
-  integrity sha512-ROHTZ+oj7sBrgtv46zZ84uWky71AoYi0vEV9CdEtc1FQunsoAGe5HbQmW76nI5QWdvECVPrSi1MCVUmizSavMg==
+  version "29.3.0"
+  resolved "https://registry.npmjs.org/jest-worker/-/jest-worker-29.3.0.tgz#240a1cd731c7d6645e8bcc37a3d584f122afb44a"
+  integrity sha512-rP8LYClB5NCWW0p8GdQT9vRmZNrDmjypklEYZuGCIU5iNviVWCZK5MILS3rQwD0FY1u96bY7b+KoU17DdZy6Ww==
   dependencies:
     "@types/node" "*"
     jest-util "^29.2.1"
@@ -4119,10 +4119,10 @@ react-is@^16.12.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-nest-router@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.npmjs.org/react-nest-router/-/react-nest-router-0.15.0.tgz#bcf24ed4a8600cdfa251203ffbb123d59fa584c5"
-  integrity sha512-bYfFEcb3fY1gQys9jeronNr2EVojNdw+dwVKmNpgkXHF5OS5bJiMzq/VmayeWDHhOjcwKbP/QZ6qcxUSTY3eTQ==
+react-nest-router@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.npmjs.org/react-nest-router/-/react-nest-router-0.16.0.tgz#f2c5308e0736148a5902f25d4498533e9c24858f"
+  integrity sha512-rSm0LPiU1MOq7zufj+f169RMhzgqBCIMC+BS8kEjwxPF3KG0HOVNiNtEiDVNBvH7xbOBTFJhf5KrVDmgQViXXQ==
   dependencies:
     tslib "^2.4.1"
 
