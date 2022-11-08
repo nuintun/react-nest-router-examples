@@ -8,14 +8,14 @@ import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 
 import react from '/images/react.svg?url';
 
-const Home = lazy(() => import('/js/pages/home/index'));
-const Login = lazy(() => import('/js/pages/login/index'));
+const Home = lazy(() => import('/js/pages/Home'));
+const Login = lazy(() => import('/js/pages/Login'));
 const Layout = lazy(() => import('/js/components/Layout'));
-const NoMatch = lazy(() => import('/js/components/NoMatch'));
 const Courses = lazy(() => import('/js/components/Courses'));
+const CoursesIndex = lazy(() => import('/js/pages/Courses'));
+const NoMatch = lazy(() => import('/js/components/NoMatch'));
 const Navigation = lazy(() => import('/js/components/Navigation'));
-const CoursesIndex = lazy(() => import('/js/pages/courses/index'));
-const CoursesDetails = lazy(() => import('/js/pages/courses/Details'));
+const CoursesDetails = lazy(() => import('/js/pages/Courses/Details'));
 
 const routes: Route<{ id: number }, 'id'>[] = [
   {
