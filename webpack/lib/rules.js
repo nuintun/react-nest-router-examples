@@ -2,38 +2,23 @@
  * @module rules
  * @listens MIT
  * @author nuintun
- * @description Get webpack rules
+ * @description 配置 Webpack 规则
  */
 
-import fs from 'fs';
-import less2js from './less2js.js';
-import configure from '../configure.js';
+import swcrc from '../../.swcrc.js';
+import postcssrc from '../../.postcssrc.js';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-
-/**
- * @function parseTheme
- * @description 解析主题文件
- * @param {string} path
- * @returns {Promise<object>}
- */
-function parseTheme(path) {
-  return new Promise(resolve => {
-    fs.readFile(path, { encoding: 'utf-8' }, (error, code) => {
-      resolve(error ? {} : less2js(code));
-    });
-  });
-}
 
 /**
  * @function resolveRules
  * @param {string} mode
- * @returns {object}
+ * @return {object}
  */
 export default async mode => {
-  const { theme } = configure;
-  const themeVars = await parseTheme(theme);
   const isDevelopment = mode !== 'production';
+  const swcOptions = { ...(await swcrc()), swcrc: false };
   const cssIdentName = isDevelopment ? '[local]-[hash:8]' : '[hash:8]';
+  const postcssOptions = { postcssOptions: { ...(await postcssrc(mode)), config: false } };
   const cssModulesOptions = { auto: true, localIdentName: cssIdentName, exportLocalsConvention: 'camelCaseOnly' };
 
   return [
@@ -41,18 +26,18 @@ export default async mode => {
       oneOf: [
         // The loader for js
         {
-          test: /\.[jt]sx?$/,
+          test: /\.[jt]sx?$/i,
           exclude: /[\\/]node_modules[\\/]/,
           use: [
             {
-              loader: 'babel-loader',
-              options: { highlightCode: true, cacheDirectory: true }
+              loader: 'swc-loader',
+              options: swcOptions
             }
           ]
         },
         // The loader for css
         {
-          test: /\.css$/,
+          test: /\.css$/i,
           use: [
             {
               loader: MiniCssExtractPlugin.loader
@@ -69,13 +54,14 @@ export default async mode => {
               }
             },
             {
-              loader: 'postcss-loader'
+              loader: 'postcss-loader',
+              options: postcssOptions
             }
           ]
         },
-        // The loader for less
+        // The loader for scss or sass
         {
-          test: /\.less$/,
+          test: /\.s[ac]ss$/i,
           use: [
             {
               loader: MiniCssExtractPlugin.loader
@@ -92,33 +78,37 @@ export default async mode => {
               }
             },
             {
-              loader: 'postcss-loader'
+              loader: 'postcss-loader',
+              options: postcssOptions
             },
             {
-              loader: 'less-loader',
-              options: { lessOptions: { modifyVars: themeVars, javascriptEnabled: true } }
+              loader: 'sass-loader'
             }
           ]
         },
         // The loader for assets
         {
           type: 'asset/resource',
-          test: /\.(mp3|ogg|wav|mp4|flv|webm)$/
+          test: /\.(mp3|ogg|wav|mp4|flv|webm)$/i
         },
         {
-          test: /\.svg$/,
+          test: /\.svg$/i,
           oneOf: [
             {
-              issuer: /\.[jt]sx?$/,
+              issuer: /\.[jt]sx?$/i,
               type: 'asset/resource',
               resourceQuery: /^\?url$/
             },
             {
-              issuer: /\.[jt]sx?$/,
+              issuer: /\.[jt]sx?$/i,
               use: [
                 {
+                  loader: 'swc-loader',
+                  options: swcOptions
+                },
+                {
                   loader: '@svgr/webpack',
-                  options: { memo: true }
+                  options: { memo: true, babel: false }
                 }
               ]
             },
@@ -129,7 +119,7 @@ export default async mode => {
         },
         {
           type: 'asset/resource',
-          test: /\.(png|gif|bmp|ico|jpe?g|woff2?|ttf|eot)$/
+          test: /\.(png|gif|bmp|ico|jpe?g|woff2?|ttf|eot)$/i
         }
       ]
     }

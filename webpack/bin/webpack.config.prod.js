@@ -2,7 +2,7 @@
  * @module webpack.config.prod
  * @listens MIT
  * @author nuintun
- * @description Webpack production configure
+ * @description 生成模式 Webpack 配置
  * @see https://github.com/facebook/create-react-app
  */
 
@@ -22,11 +22,18 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
   configure.devtool = false;
   configure.cache.name = 'prod';
-  configure.optimization.minimizer = [new CssMinimizerPlugin(), new TerserPlugin()];
+
+  // 使用自定义 minimizer 工具
+  configure.optimization.minimizer = [
+    new CssMinimizerPlugin(),
+    new TerserPlugin({
+      minify: TerserPlugin.swcMinify
+    })
+  ];
 
   // 开启 webpack-bundle-analyzer 分析工具
   if (process.argv[2] === '--report') {
-    configure.plugins.push(new BundleAnalyzerPlugin({ analyzerMode: 'server', analyzerPort: 'auto' }));
+    configure.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 'auto' }));
   }
 
   const compiler = webpack(configure);

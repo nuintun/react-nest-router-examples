@@ -2,7 +2,7 @@
  * @module webpack.config.base
  * @listens MIT
  * @author nuintun
- * @description Webpack base configure
+ * @description 基础 Webpack 配置
  */
 
 import webpack from 'webpack';
@@ -17,7 +17,7 @@ import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
 /**
  * @function resolveEnvironment
  * @param {object} env
- * @returns {object}
+ * @return {object}
  */
 function resolveEnvironment(env) {
   const output = {};
@@ -35,7 +35,7 @@ const { resolve } = createRequire(import.meta.url);
 /**
  * @function resolveConfigure
  * @param {string} mode
- * @returns {Promise<object>}
+ * @return {Promise<object>}
  */
 export default async mode => {
   const progress = {
@@ -86,7 +86,7 @@ export default async mode => {
     cache: {
       type: 'filesystem',
       buildDependencies: {
-        theme: [configure.theme]
+        configure: [resolve('../configure.js')]
       }
     },
     stats: {
