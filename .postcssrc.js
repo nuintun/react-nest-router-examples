@@ -3,8 +3,12 @@
  * @description PostCSS 配置
  */
 
-import targets from './webpack/lib/targets.js';
+import targets from './tools/lib/targets.js';
 
+/**
+ * @param {string} mode
+ * @return {Promise<import('./tools/interface').PostcssConfig>}
+ */
 export default async mode => {
   return {
     sourceMap: mode !== 'production',

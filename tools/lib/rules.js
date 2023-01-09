@@ -1,7 +1,5 @@
 /**
  * @module rules
- * @listens MIT
- * @author nuintun
  * @description 配置 Webpack 规则
  */
 
@@ -12,7 +10,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 /**
  * @function resolveRules
  * @param {string} mode
- * @return {object}
+ * @return {Promise<NonNullable<import('webpack').Configuration['module']>['rules']>}
  */
 export default async mode => {
   const isDevelopment = mode !== 'production';
@@ -97,7 +95,12 @@ export default async mode => {
             {
               issuer: /\.[jt]sx?$/i,
               type: 'asset/resource',
-              resourceQuery: /^\?url$/
+              resourceQuery: /^\?url$/,
+              use: [
+                {
+                  loader: '@nuintun/svgo-loader'
+                }
+              ]
             },
             {
               issuer: /\.[jt]sx?$/i,
@@ -107,13 +110,17 @@ export default async mode => {
                   options: swcOptions
                 },
                 {
-                  loader: '@svgr/webpack',
-                  options: { memo: true, babel: false }
+                  loader: 'svgc-loader'
                 }
               ]
             },
             {
-              type: 'asset/resource'
+              type: 'asset/resource',
+              use: [
+                {
+                  loader: '@nuintun/svgo-loader'
+                }
+              ]
             }
           ]
         },

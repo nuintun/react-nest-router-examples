@@ -103,7 +103,7 @@ dist
 # TernJS port file
 .tern-port
 
-# Build assets
-wwwroot/public/
-wwwroot/app.html
+# Build dist
+/wwwroot/public/
+/wwwroot/app.html
 *.module.scss.d.ts
