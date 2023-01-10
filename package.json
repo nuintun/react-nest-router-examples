@@ -36,7 +36,7 @@
     "svgo": "^3.0.0"
   },
   "dependencies": {
-    "antd": "^5.1.2",
+    "antd": "^5.1.4",
     "core-js": "^3.27.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -62,7 +62,7 @@
     "koa": "^2.14.1",
     "koa-compress": "^5.1.0",
     "koa-files": "^2.3.1",
-    "koa-webpack-dev-service": "^0.9.10",
+    "koa-webpack-dev-service": "^0.9.11",
     "memfs": "^3.4.13",
     "mini-css-extract-plugin": "^2.7.2",
     "nodemon": "^2.0.20",
