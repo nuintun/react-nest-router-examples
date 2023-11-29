@@ -28,6 +28,7 @@
       "tools/**/*",
       ".postcssrc.js",
       "app.config.js",
+      "svgo.config.js",
       ".browserslistrc",
       "wwwroot/favicon.ico"
     ]
