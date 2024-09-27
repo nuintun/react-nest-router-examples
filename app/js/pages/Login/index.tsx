@@ -1,4 +1,4 @@
-import styles from '/css/login/index.module.scss';
+import * as styles from '/css/login/index.module.scss';
 
 import { memo, useEffect } from 'react';
 

@@ -4,29 +4,89 @@
  */
 
 import webpack from 'webpack';
-import { resolve } from 'path';
+import { join, resolve } from 'path';
+import { readdir } from 'fs/promises';
 import resolveRules from '../lib/rules.js';
 import appConfig from '../../app.config.js';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
 
 /**
+ * @function read
+ * @param {string} path
+ * @return {Promise<import('fs').Dirent[]>}
+ */
+async function read(path) {
+  const entries = await readdir(path, {
+    withFileTypes: true
+  });
+
+  return entries.values();
+}
+
+/**
+ * @function getFiles
+ * @param {string} root
+ * @return {AsyncGenerator<string>}
+ */
+export async function* getFiles(root) {
+  const waiting = [];
+
+  root = resolve(root);
+
+  let current = [root, await read(root)];
+
+  while (current) {
+    const [, iterator] = current;
+    const item = iterator.next();
+
+    if (item.done) {
+      current = waiting.pop();
+    } else {
+      const [dirname] = current;
+      const { value: stat } = item;
+      const path = join(dirname, stat.name);
+
+      if (stat.isFile()) {
+        yield path;
+      } else if (stat.isDirectory()) {
+        waiting.push([path, await read(path)]);
+      }
+    }
+  }
+}
+
+/**
+ * @function arrayFromAsync
+ * @param {ArrayLike<T> | Iterable<T> | AsyncIterable<T>} iterator
+ * @return {Promise<T[]>}
+ */
+async function arrayFromAsync(iterator) {
+  const array = [];
+
+  for await (const item of iterator) {
+    array.push(item);
+  }
+
+  return array;
+}
+
+/**
  * @function resolveEnvironment
+ * @param {string} mode
  * @param {object} env
- * @param {boolean} isDevelopment
  * @return {Promise<object>}
  */
-async function resolveEnvironment(env, isDevelopment) {
+async function resolveEnvironment(mode, env) {
   if (typeof env === 'function') {
-    env = await env(isDevelopment, process.env);
+    env = await env(mode, process.env);
   }
 
   env = {
     ...env,
-    __DEV__: isDevelopment,
-    __APP_NAME__: appConfig.name
+    __APP_NAME__: appConfig.name,
+    __DEV__: mode !== 'production'
   };
 
   const output = {};
@@ -62,16 +122,12 @@ export default async mode => {
     templateParameters: { lang: appConfig.lang }
   };
 
-  const env = await resolveEnvironment(appConfig.env, isDevelopment);
+  const env = await resolveEnvironment(mode, appConfig.env);
 
   const css = {
     ignoreOrder: true,
     filename: `css/[${isDevelopment ? 'name' : 'contenthash'}].css`,
     chunkFilename: `css/[${isDevelopment ? 'name' : 'contenthash'}].css`
-  };
-
-  const clean = {
-    cleanOnceBeforeBuildPatterns: [appConfig.entryHTML, appConfig.outputPath]
   };
 
   return {
@@ -80,6 +136,7 @@ export default async mode => {
     entry: appConfig.entry,
     context: appConfig.context,
     output: {
+      clean: true,
       hashFunction: 'xxhash64',
       path: appConfig.outputPath,
       publicPath: appConfig.publicPath,
@@ -98,7 +155,8 @@ export default async mode => {
           resolve('.postcssrc.js'),
           resolve('app.config.js'),
           resolve('.browserslistrc')
-        ]
+        ],
+        tools: await arrayFromAsync(getFiles('tools'))
       }
     },
     stats: {
@@ -124,7 +182,6 @@ export default async mode => {
     plugins: [
       new webpack.ProgressPlugin(progress),
       new CaseSensitivePathsPlugin(),
-      new CleanWebpackPlugin(clean),
       new webpack.DefinePlugin(env),
       new MiniCssExtractPlugin(css),
       new HtmlWebpackPlugin(html),
@@ -134,12 +191,10 @@ export default async mode => {
       splitChunks: {
         chunks: 'all'
       },
+      runtimeChunk: 'single',
       removeEmptyChunks: true,
       mergeDuplicateChunks: true,
-      removeAvailableModules: true,
-      runtimeChunk: {
-        name: entrypoint => `runtime-${entrypoint.name}`
-      }
+      removeAvailableModules: true
     }
   };
 };

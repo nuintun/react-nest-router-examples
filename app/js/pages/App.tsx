@@ -1,5 +1,5 @@
 import '/css/global.scss';
-import styles from '/css/App.module.scss';
+import * as styles from '/css/App.module.scss';
 
 import { Button, Result, Space } from 'antd';
 import { Route, Router } from 'react-nest-router';
