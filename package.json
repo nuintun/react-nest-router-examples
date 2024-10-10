@@ -35,11 +35,11 @@
   },
   "dependencies": {
     "@swc/helpers": "^0.5.13",
-    "antd": "^5.21.2",
+    "antd": "^5.21.3",
     "core-js": "^3.38.1",
     "koa": "^2.15.3",
     "koa-compress": "^5.1.1",
-    "koa-files": "^3.0.5",
+    "koa-files": "^3.0.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^4.0.13",
