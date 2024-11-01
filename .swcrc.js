@@ -3,7 +3,7 @@
  * @description SWC 配置
  */
 
-import { resolve } from 'path';
+import { resolve } from 'node:path';
 import targets from './tools/lib/targets.js';
 
 /**

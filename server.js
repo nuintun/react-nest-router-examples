@@ -2,8 +2,8 @@
  * @server
  */
 
-import fs from 'fs';
 import Koa from 'koa';
+import fs from 'node:fs';
 import files from 'koa-files';
 import compress from 'koa-compress';
 
@@ -22,7 +22,7 @@ app.use(async ctx => {
 
   ctx.set('X-Content-Type-Options', 'nosniff');
 
-  ctx.body = fs.readFileSync('wwwroot/app.html');
+  ctx.body = fs.createWriteStream('wwwroot/app.html');
 });
 
 app.listen(8000, () => {
