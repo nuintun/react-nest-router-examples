@@ -34,8 +34,8 @@
     ]
   },
   "dependencies": {
-    "@swc/helpers": "^0.5.13",
-    "antd": "^5.21.6",
+    "@swc/helpers": "^0.5.15",
+    "antd": "^5.22.0",
     "core-js": "^3.39.0",
     "koa": "^2.15.3",
     "koa-compress": "^5.1.1",
@@ -48,7 +48,7 @@
   "devDependencies": {
     "@nuintun/svgo-loader": "^0.2.16",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
-    "@swc/core": "^1.9.1",
+    "@swc/core": "^1.9.2",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/throttle-debounce": "^5.0.2",
@@ -65,7 +65,7 @@
     "memfs": "^4.14.0",
     "mini-css-extract-plugin": "^2.9.2",
     "nodemon": "^3.1.7",
-    "postcss": "^8.4.47",
+    "postcss": "^8.4.49",
     "postcss-loader": "^8.1.1",
     "prettier": "^3.3.3",
     "sass": "^1.80.6",
