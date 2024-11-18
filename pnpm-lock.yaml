@@ -109,11 +109,11 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       sass:
-        specifier: ^1.80.7
-        version: 1.80.7
+        specifier: ^1.81.0
+        version: 1.81.0
       sass-loader:
         specifier: ^16.0.3
-        version: 16.0.3(sass@1.80.7)(webpack@5.96.1(@swc/core@1.9.2(@swc/helpers@0.5.15)))
+        version: 16.0.3(sass@1.81.0)(webpack@5.96.1(@swc/core@1.9.2(@swc/helpers@0.5.15)))
       svgc-loader:
         specifier: ^0.2.16
         version: 0.2.16(react@18.3.1)(webpack@5.96.1(@swc/core@1.9.2(@swc/helpers@0.5.15)))
@@ -2254,8 +2254,8 @@ packages:
       webpack:
         optional: true
 
-  sass@1.80.7:
-    resolution: {integrity: sha512-MVWvN0u5meytrSjsU7AWsbhoXi1sc58zADXFllfZzbsBT1GHjjar6JwBINYPRrkx/zqnQ6uqbQuHgE95O+C+eQ==}
+  sass@1.81.0:
+    resolution: {integrity: sha512-Q4fOxRfhmv3sqCLoGfvrC9pRV8btc0UtqL9mN6Yrv6Qi9ScL55CVH1vlPP863ISLEEMNLLuu9P+enCeGHlnzhA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -4691,14 +4691,14 @@ snapshots:
 
   safe-buffer@5.2.1: {}
 
-  sass-loader@16.0.3(sass@1.80.7)(webpack@5.96.1(@swc/core@1.9.2(@swc/helpers@0.5.15))):
+  sass-loader@16.0.3(sass@1.81.0)(webpack@5.96.1(@swc/core@1.9.2(@swc/helpers@0.5.15))):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:
-      sass: 1.80.7
+      sass: 1.81.0
       webpack: 5.96.1(@swc/core@1.9.2(@swc/helpers@0.5.15))
 
-  sass@1.80.7:
+  sass@1.81.0:
     dependencies:
       chokidar: 4.0.1
       immutable: 5.0.2
