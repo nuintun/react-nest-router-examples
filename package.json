@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@swc/helpers": "^0.5.15",
-    "antd": "^5.22.1",
+    "antd": "^5.22.2",
     "core-js": "^3.39.0",
     "koa": "^2.15.3",
     "koa-compress": "^5.1.1",
