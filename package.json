@@ -20,19 +20,6 @@
     "email": "nuintun@qq.com"
   },
   "license": "MIT",
-  "nodemonConfig": {
-    "quiet": true,
-    "delay": "128ms",
-    "watch": [
-      ".swcrc.js",
-      "tools/**/*",
-      ".postcssrc.js",
-      "app.config.js",
-      "svgo.config.js",
-      ".browserslistrc",
-      "wwwroot/favicon.ico"
-    ]
-  },
   "dependencies": {
     "@swc/helpers": "^0.5.15",
     "antd": "^5.22.5",
