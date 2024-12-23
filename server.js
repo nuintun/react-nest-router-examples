@@ -4,15 +4,19 @@
 
 import Koa from 'koa';
 import fs from 'node:fs';
-import files from 'koa-files';
+import { server } from 'koa-files';
 import compress from 'koa-compress';
 
 const app = new Koa();
 
-app.use(compress({ br: false }));
+app.use(
+  compress({
+    br: false
+  })
+);
 
 app.use(
-  files('wwwroot', {
+  server('wwwroot', {
     cacheControl: 'public, max-age=31536000'
   })
 );
