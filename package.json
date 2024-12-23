@@ -80,9 +80,11 @@
     "webpack-dev-service": "^0.14.6"
   },
   "overrides": {
-    "ws": "^8.0.0"
+    "ws": "^8.0.0",
+    "glob": "^11.0.0"
   },
   "resolutions": {
-    "ws": "^8.0.0"
+    "ws": "^8.0.0",
+    "glob": "^11.0.0"
   }
 }
