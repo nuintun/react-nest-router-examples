@@ -3,14 +3,14 @@
  * @description SWC 配置
  */
 
-import { resolve } from 'node:path';
 import targets from './tools/lib/targets.js';
 
 /**
  * @function swcrc
+ * @param {string} mode
  * @return {Promise<import('./tools/interface').SwcConfig>}
  */
-export default async () => {
+export default async mode => {
   return {
     jsc: {
       externalHelpers: true,
@@ -20,11 +20,9 @@ export default async () => {
       },
       transform: {
         react: {
-          runtime: 'automatic'
+          runtime: 'automatic',
+          refresh: mode !== 'production'
         }
-      },
-      experimental: {
-        cacheRoot: resolve('node_modules/.cache/swc')
       }
     },
     env: {

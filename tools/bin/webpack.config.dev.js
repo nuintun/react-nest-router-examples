@@ -4,8 +4,6 @@
  * @see https://github.com/facebook/create-react-app
  */
 
-'use strict';
-
 const mode = 'development';
 
 process.env.NODE_ENV = mode;
@@ -16,9 +14,9 @@ import memfs from 'memfs';
 import webpack from 'webpack';
 import compress from 'koa-compress';
 import resolveIp from '../lib/ip.js';
-import dev from 'webpack-dev-service';
 import appConfig from '../../app.config.js';
 import { findFreePorts } from 'find-free-ports';
+import { server as dev } from 'webpack-dev-service';
 import resolveConfigure from './webpack.config.base.js';
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 

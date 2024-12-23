@@ -13,14 +13,15 @@ const images = path.resolve('app/images');
  * @type {import('./tools/interface').AppConfig}
  */
 export default {
+  ports: 8000,
   lang: 'zh-CN',
   publicPath: '/public/',
   name: 'React Nest Router',
   context: path.resolve('app'),
   outputPath: path.resolve('wwwroot/public'),
   entryHTML: path.resolve('wwwroot/app.html'),
-  favicon: path.resolve('wwwroot/favicon.ico'),
-  entry: [path.resolve('app/js/pages/index.tsx')],
+  entry: path.resolve('app/js/pages/index.tsx'),
+  favicon: path.resolve('app/images/favicon.ico'),
   alias: { '/js': js, '/css': css, '/images': images },
   meta: { viewport: 'width=device-width,initial-scale=1.0' }
 };
