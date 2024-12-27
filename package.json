@@ -22,7 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "@swc/helpers": "^0.5.15",
-    "antd": "^5.22.6",
+    "antd": "^5.22.7",
     "core-js": "^3.39.0",
     "koa": "^2.15.3",
     "koa-compress": "^5.1.1",
