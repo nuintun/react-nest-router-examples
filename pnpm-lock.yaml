@@ -53,7 +53,7 @@ importers:
         specifier: ^1.10.4
         version: 1.10.4(@swc/helpers@0.5.15)
       '@types/react':
-        specifier: ^18.3.17
+        specifier: ^18.3.18
         version: 18.3.18
       '@types/react-dom':
         specifier: ^18.3.5
