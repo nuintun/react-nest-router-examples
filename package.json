@@ -23,7 +23,6 @@
   "dependencies": {
     "@swc/helpers": "^0.5.15",
     "antd": "^5.23.0",
-    "core-js": "^3.40.0",
     "koa": "^2.15.3",
     "koa-compress": "^5.1.1",
     "koa-files": "^4.0.1",
@@ -78,7 +77,6 @@
     "onlyBuiltDependencies": [
       "@swc/core",
       "bufferutil",
-      "core-js",
       "core-js-pure",
       "utf-8-validate"
     ]
