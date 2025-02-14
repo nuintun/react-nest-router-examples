@@ -15,7 +15,7 @@ const images = path.resolve('app/images');
 export default {
   ports: 8000,
   lang: 'zh-CN',
-  publicPath: '/public/',
+  publicPath: 'public/',
   name: 'React Nest Router',
   context: path.resolve('app'),
   outputPath: path.resolve('wwwroot/public'),
