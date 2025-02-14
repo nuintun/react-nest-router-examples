@@ -4,10 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  ws: ^8.0.0
-  glob: ^11.0.0
-
 importers:
 
   .:
