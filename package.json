@@ -11,7 +11,7 @@
     "email": "nuintun@qq.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/nuintun/rspack-antd-builder",
+  "homepage": "https://github.com/nuintun/react-nest-router-examples",
   "scripts": {
     "lint": "tsc --noEmit",
     "prod": "node tools/bin/rspack.config.prod.js",
