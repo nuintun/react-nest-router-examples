@@ -1,5 +1,5 @@
 import { Space } from 'antd';
-import { memo, useCallback, useEffect } from 'react';
+import React, { memo, useCallback, useEffect } from 'react';
 import { useNavigate, useResolve } from 'react-nest-router';
 
 export default memo(function NoMatch() {
