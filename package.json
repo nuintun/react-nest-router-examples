@@ -20,15 +20,15 @@
   },
   "dependencies": {
     "@swc/helpers": "^0.5.17",
-    "antd": "^5.25.3",
+    "antd": "^5.25.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
     "react-nest-router": "^0.20.5"
   },
   "devDependencies": {
-    "@nuintun/svgo-loader": "^0.4.5",
-    "@rspack/core": "^1.3.12",
+    "@nuintun/svgo-loader": "^0.4.6",
+    "@rspack/core": "^1.3.13",
     "@rspack/plugin-react-refresh": "^1.4.3",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
@@ -43,9 +43,9 @@
     "nodemon": "^3.1.10",
     "prettier": "^3.5.3",
     "rspack-dev-middleware": "^0.1.21",
-    "sass-embedded": "^1.89.0",
+    "sass-embedded": "^1.89.1",
     "sass-loader": "^16.0.5",
-    "svgc-loader": "^0.4.5",
+    "svgc-loader": "^0.4.6",
     "typescript": "^5.8.3",
     "utf-8-validate": "^6.0.5"
   }
