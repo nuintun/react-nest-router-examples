@@ -24,8 +24,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(react@19.2.0)
       react-nest-router:
-        specifier: ^0.21.1
-        version: 0.21.1(react@19.2.0)
+        specifier: ^0.21.2
+        version: 0.21.2(react@19.2.0)
     devDependencies:
       '@nuintun/svgo-loader':
         specifier: ^0.5.7
@@ -71,7 +71,7 @@ importers:
         version: 3.1.11
       prettier:
         specifier: ^3.7.3
-        version: 3.7.3
+        version: 3.7.4
       rspack-dev-middleware:
         specifier: ^0.2.2
         version: 0.2.2(@rspack/core@1.6.6(@swc/helpers@0.5.17))(bufferutil@4.0.9)(koa@3.1.1)(utf-8-validate@6.0.5)
@@ -1298,8 +1298,8 @@ packages:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
 
-  prettier@3.7.3:
-    resolution: {integrity: sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==}
+  prettier@3.7.4:
+    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -1348,8 +1348,8 @@ packages:
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
-  react-nest-router@0.21.1:
-    resolution: {integrity: sha512-xZRIraJZrzNwXcEOrJ7NV6wZV2E2Xore11Etw/lFTEuG3J86cA4u5L7+H9AYt9mTxJsg0I3PsRaPslk/ZGopmg==}
+  react-nest-router@0.21.2:
+    resolution: {integrity: sha512-7jPjpehejYpZKDpLXLkwgMdNTUGq7hGPETuDVgA0aNy2OZK+SeXGDHJugal2QrNMMXvvg/DHt97B0FktG6STug==}
     peerDependencies:
       react: '>=17.0.0'
 
@@ -2961,7 +2961,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  prettier@3.7.3: {}
+  prettier@3.7.4: {}
 
   pstree.remy@1.1.8: {}
 
@@ -3013,7 +3013,7 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-nest-router@0.21.1(react@19.2.0):
+  react-nest-router@0.21.2(react@19.2.0):
     dependencies:
       react: 19.2.0
       tslib: 2.8.1

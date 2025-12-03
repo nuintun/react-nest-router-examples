@@ -24,7 +24,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-error-boundary": "^6.0.0",
-    "react-nest-router": "^0.21.1"
+    "react-nest-router": "^0.21.2"
   },
   "devDependencies": {
     "@nuintun/svgo-loader": "^0.5.7",
