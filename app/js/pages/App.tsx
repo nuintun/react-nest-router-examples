@@ -51,6 +51,20 @@ const routes: Route<{ id: number }, 'id'>[] = [
   }
 ];
 
+function getErrorMessage(error: unknown): string {
+  if (error instanceof Error) {
+    const { stack, message } = error;
+
+    if (stack != null) {
+      return stack?.replace(/(\r?\n)\s{2,}/gm, '$1  ');
+    }
+
+    return message;
+  }
+
+  return `${error}`;
+}
+
 const ErrorFallback = memo(function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
   if (__DEV__) {
     return (
@@ -65,7 +79,7 @@ const ErrorFallback = memo(function ErrorFallback({ error, resetErrorBoundary }:
         subTitle={
           <div style={{ display: 'flex', margin: '24px 0 0', justifyContent: 'center' }}>
             <pre style={{ fontFamily: 'monospace', color: '#f00', padding: 0, margin: 0, textAlign: 'left' }}>
-              {error.stack}
+              {getErrorMessage(error)}
             </pre>
           </div>
         }
