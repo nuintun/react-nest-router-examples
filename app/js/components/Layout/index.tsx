@@ -12,7 +12,7 @@ export default memo(function Layout() {
   }, []);
 
   return (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <div>Layout</div>
       <Outlet />
     </Space>

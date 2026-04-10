@@ -24,7 +24,7 @@ export default memo(function NoMatch() {
   }, []);
 
   return (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <div>No Match</div>
       <a href={resolve('/')} onClick={go('/')}>
         Home

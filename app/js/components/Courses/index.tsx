@@ -18,7 +18,7 @@ export default memo(function Courses() {
   });
 
   return (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <div>Courses</div>
       <Outlet />
     </Space>

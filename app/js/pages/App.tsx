@@ -90,7 +90,7 @@ const ErrorFallback = memo(function ErrorFallback({ error, resetErrorBoundary }:
 export default memo(function App(): React.ReactElement {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <Space className={styles.app} direction="vertical">
+      <Space className={styles.app} orientation="vertical">
         <img className={styles.react} src={react} alt="react" />
         <Suspense fallback="loading...">
           <Router routes={routes} context={{ message: 'Outlet Context' }}>

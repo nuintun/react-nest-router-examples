@@ -29,7 +29,7 @@ export default memo(function Navigation() {
   }, []);
 
   return (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Space>
         <a href={resolve('/login')} onClick={go('/login')}>
           Login
