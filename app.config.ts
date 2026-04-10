@@ -14,9 +14,9 @@ const images = resolve('app/images');
 export default defineConfig({
   ports: 8000,
   lang: 'zh-CN',
-  name: 'Ant Design',
   publicPath: '/public/',
   context: resolve('app'),
+  name: 'React Nest Router',
   outputPath: resolve('wwwroot/public'),
   entryHTML: resolve('wwwroot/app.html'),
   entry: resolve('app/js/pages/index.tsx'),
