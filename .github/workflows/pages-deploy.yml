@@ -36,12 +36,12 @@ jobs:
         run: pnpm install --frozen-lockfile
       # 构建项目
       - name: Build GitHub Pages
-        run: pnpm build && pnpm prod
+        run: pnpm prod
       # 上传构建产物
       - name: Upload GitHub Pages
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./packages/examples/wwwroot
+          path: ./wwwroot
   # 部署任务
   deploy:
     needs: build
