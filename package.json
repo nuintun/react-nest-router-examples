@@ -15,8 +15,8 @@
   "scripts": {
     "lint": "tsc --noEmit",
     "start": "node server.ts",
-    "prod": "node tools/bin/rspack.config.prod.ts",
-    "dev": "nodemon --exec node tools/bin/rspack.config.dev.ts",
+    "prod": "node tools/rspack.config.prod.ts",
+    "dev": "nodemon --exec node tools/rspack.config.dev.ts",
     "format": "prettier --write . --ignore-path .prettierignore"
   },
   "dependencies": {
@@ -49,6 +49,7 @@
     "sass-embedded": "^1.99.0",
     "sass-loader": "^16.0.7",
     "svgc-loader": "^0.6.0",
+    "svgo": "^4.0.1",
     "typescript": "^6.0.2",
     "utf-8-validate": "^6.0.6"
   }
