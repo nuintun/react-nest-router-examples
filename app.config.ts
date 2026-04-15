@@ -38,10 +38,10 @@ export default defineConfig({
       filename: fallback
     }
   ],
-  publicPath: '/public/',
   context: resolve('app'),
   historyApiFallback: html,
   name: 'React Nest Router',
   outputPath: resolve('wwwroot/public'),
-  entry: resolve('app/js/pages/index.tsx')
+  entry: resolve('app/js/pages/index.tsx'),
+  publicPath: '/react-nest-router-examples/public/'
 });
