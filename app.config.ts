@@ -10,6 +10,12 @@ const js = resolve('app/js');
 const css = resolve('app/css');
 const images = resolve('app/images');
 const html = resolve('wwwroot/index.html');
+const fallback = resolve('wwwroot/404.html');
+const favicon = resolve('app/images/favicon.ico');
+
+const meta = {
+  viewport: 'width=device-width,initial-scale=1.0'
+};
 
 // 生成配置文件
 export default defineConfig({
@@ -20,17 +26,22 @@ export default defineConfig({
     '/css': css,
     '/images': images
   },
+  pages: [
+    {
+      meta,
+      favicon,
+      filename: html
+    },
+    {
+      meta,
+      favicon,
+      filename: fallback
+    }
+  ],
   publicPath: '/public/',
   context: resolve('app'),
   historyApiFallback: html,
   name: 'React Nest Router',
   outputPath: resolve('wwwroot/public'),
-  entry: resolve('app/js/pages/index.tsx'),
-  pages: {
-    filename: html,
-    favicon: resolve('app/images/favicon.ico'),
-    meta: {
-      viewport: 'width=device-width,initial-scale=1.0'
-    }
-  }
+  entry: resolve('app/js/pages/index.tsx')
 });
