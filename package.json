@@ -14,7 +14,6 @@
   "homepage": "https://github.com/nuintun/react-nest-router-examples",
   "scripts": {
     "lint": "tsc --noEmit",
-    "start": "node server.ts",
     "prod": "node tools/rspack.config.prod.ts",
     "dev": "nodemon --exec node tools/rspack.config.dev.ts",
     "format": "prettier --write . --ignore-path .prettierignore"
